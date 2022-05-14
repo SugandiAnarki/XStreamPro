@@ -1,0 +1,1 @@
+const xstreampro={get:async function(t,r){let s="";t&&r||(s=JSON.stringify({status:!1,msg:"missing host or vidID"}));var n=workers[random(workers.length)];let a=await fetch(`${n}/api/${t}/${r}`);return a=await a.json(),s=1==a.status?a:JSON.stringify({status:!1,msg:"An error occurred"}),s}};function random(t){return Math.floor(Math.random()*t)}
